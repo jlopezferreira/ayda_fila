@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1684697709 source:c:\users\win10\sistemas\fila\main.cpp
+	<iostream>
+	"Fila.h"
+
+1684704663 source:c:\users\win10\sistemas\fila\fila.cpp
+	<iostream>
+	<cassert>
+	"Fila.h"
+
+1684701458 c:\users\win10\sistemas\fila\fila.h
+
