@@ -18,9 +18,9 @@ private:
 public:
     Fila(); // Constructor
     ~Fila(); // Destructor
-    void agregar(T elemento);
-    bool esVacia();
-    T obtener(); // pre: noVacia
+    void agregar(const T & elemento);
+    bool esVacia() const;
+    const T & obtener() const; // pre: noVacia
     bool eliminar(); // pre: noVacia
 };
 

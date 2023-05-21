@@ -1,4 +1,3 @@
-#include <iostream>
 #include <cassert>
 #include "Fila.h"
 
@@ -15,7 +14,7 @@ Fila<T>::~Fila()
 }
 
 template <typename T>
-void Fila<T>::agregar(T elemento)
+void Fila<T>::agregar(const T & elemento)
 {
     Nodo * nuevo = new Nodo;
     nuevo->elemento = elemento;
@@ -24,24 +23,24 @@ void Fila<T>::agregar(T elemento)
 }
 
 template <typename T>
-bool Fila<T>::esVacia()
+bool Fila<T>::esVacia() const
 {
     return puntero_fila == NULL;
 }
 
 // pre: noVacia
 template <typename T>
-T Fila<T>::obtener()
+const T & Fila<T>::obtener() const
 {
     assert(!esVacia());
-    T elem;
+    T * elem;
     Nodo * cursor = puntero_fila;
     while (cursor != NULL) {
         if (cursor->siguiente == NULL)
-            elem = cursor->elemento;
+            elem = &(cursor->elemento);
         cursor = cursor->siguiente;
     }
-    return elem;
+    return (*elem);
 }
 
 // pre: noVacia
